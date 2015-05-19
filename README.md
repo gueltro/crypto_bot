@@ -1,2 +1,1 @@
-# crpyto_bot
-API to store encrypted file on Reddit 
+Add the following to your .bashrc of .zshrc
