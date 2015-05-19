@@ -71,3 +71,55 @@ def read_file(filename):
     f.close()
 
     os.system("openssl aes-256-cbc -d -in "+temp_file+" -a -out " + filename)
+
+def new_post(filename):
+	[r_username,r_password,r_truck]  = get_info() 
+	cipher_name = hashlib.sha224(filename).hexdigest() 
+	
+	temp_file = temp_folder+cipher_name
+
+    	os.system("openssl aes-256-cbc -in "+filename+" -a -out " + temp_file)
+
+	cipher_text = open(temp_file).read()
+	user_agent = ("crypto_angel 4")
+    	r = praw.Reddit(user_agent = user_agent)
+    	r.login(r_username, r_password)
+    	subreddit = r.get_subreddit("cryptoparadise")
+	step = 5000	
+	ciphers = [cipher_text[i:i+step] for i in range(0, len(cipher_text), step)]
+	subreddit.submit(cipher_name,"a pic")	
+
+	for submission in subreddit.get_hot():
+		if submission.title == cipher_name:
+			for cipher in ciphers:
+				submission.add_comment(cipher)			 
+
+def read_post(filename):
+	[r_username,r_password,r_truck]  = get_info() 
+	cipher_name = hashlib.sha224(filename).hexdigest() 
+	
+	temp_file = temp_folder+cipher_name
+	user_agent = ("crypto_angel 4")
+    	r = praw.Reddit(user_agent = user_agent)
+    	r.login(r_username, r_password)
+    	subreddit = r.get_subreddit("cryptoparadise")
+	
+	## Collect the comments in the interested post
+	cipher_text = ""	
+
+	for submission in subreddit.get_hot():
+		if submission.title == cipher_name:
+			for comment in submission.comments: 
+				cipher_text += comment.body 
+
+	##Write the encrypted file in the temp folder
+	temp_file = temp_folder + cipher_name
+
+    	f = open(temp_file,'w')
+    	f.write(cipher_text+"\n")
+   	f.close()
+
+	##Decrypt the file and store it in current folder
+   	os.system("openssl aes-256-cbc -d -in "+temp_file+" -a -out " + filename)
+
+
