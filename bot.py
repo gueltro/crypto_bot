@@ -44,7 +44,7 @@ def read_cipher(cipher_name,r_trunk):
             for comment in submission.comments:
                 lines =  comment.body.split("\n")
                 if lines[0] == cipher_name:
-                    return lines[1] 
+                    return "\n".join(lines[1:]) 
 
 
 def post_file(filename):
