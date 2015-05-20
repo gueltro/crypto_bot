@@ -4,7 +4,16 @@
 cbot allows you to store encrypted data on reddt.com/r/cryptoparadise (or somwhere else on reddit). The data is encrypted locally with openssl and sent on reddit as a normal post.
 
 ## Can I run `cbot`?
-I tested this on linux debian but it should work on any unix machine. In order to make this work you need openssl and praw. 
+I tested this on linux debian but it should work on any unix machine. In order to make this work you need openssl and praw.
+
+For example on debian you can download openssl with:
+
+`sudo apt-get install openssl` 
+
+and praw with:
+
+`sudo pip install praw`
+
 
 ## How do I start usig `cbot`?
 Insert this in yout .bashrc (or .zshrc or similar):
@@ -31,7 +40,7 @@ Download the file from a post that you created:
 
 `cbot read myfile`
 
-The commands `big-write` and `big-file` are intended to store files with more than 10000 character of that. This will create a new post on /r/cryptoparadise and post multiple comment with your encrypted payload. 
+The commands `big-write` and `big-file` are intended to store files with more than 10000 character on them. This will create a new post on /r/cryptoparadise and post multiple comment with your encrypted payload. 
 
 
 Store a big file in a post in /r/cryptoparadise:
@@ -41,3 +50,5 @@ Store a big file in a post in /r/cryptoparadise:
 Recover a big file from a post in /r/cryptoparadise:
 
 `cbot big-read myfile`
+
+Note that I do not advice storing big files. It will take a very long time, and it will overload reddit, that is open source and  allows us to run bots. 
