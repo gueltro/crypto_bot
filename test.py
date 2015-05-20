@@ -1,4 +1,4 @@
 from bot import *
 login()
-#new_post('pop')
-read_post("pop")
+new_post('w.mp3')
+#read_post("pop")
