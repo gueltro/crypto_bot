@@ -4,7 +4,7 @@
 cbot allows you to store encrypted data on reddt.com/r/cryptoparadise (or somwhere else on reddit). The data is encrypted locally with openssl and sent on reddit as a normal post.
 
 ## Can I run `cbot`?
-I tested this on linux debian but it should work on any unix machine. In order to make this work you need openssl and praw.
+I tested this on linux debian and OSX but it should work on any unix machine. In order to make this work you need openssl and praw.
 
 For example on debian you can download openssl with:
 
