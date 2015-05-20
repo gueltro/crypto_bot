@@ -1,7 +1,7 @@
 # `cbot`
 
 ## What is `cbot`?
-cbot allows you to store encrypted data on [r/cryptoparadise] (www.reddit.com/r/cryptoparadise) (or somwhere else on reddit). The data is encrypted locally with openssl and sent on reddit as a normal post.
+cbot allows you to store encrypted data on [r/cryptoparadise] (https://www.reddit.com/r/cryptoparadise) (or somwhere else on reddit). The data is encrypted locally with openssl and sent on reddit as a normal post.
 
 ## Can I run `cbot`?
 I tested this on linux debian and OSX but it should work on any unix machine. In order to make this work you need openssl and praw.
