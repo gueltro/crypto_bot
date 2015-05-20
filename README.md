@@ -1,3 +1,5 @@
+cbot allows you to store encrypted data on reddt.com/r/cryptoparadise (or somwhere else on reddit). The data is encrypted locally with openssl and sent on reddit as a normal post. 
+
 Insert this in yout .bashrc:
 
 `alias cbot="python $USER/crypto_bot/interface.py"`
