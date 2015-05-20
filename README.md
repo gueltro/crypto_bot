@@ -18,7 +18,7 @@ Download the file from a post that you created:
 
 Store a big file in a post in /r/cryptoparadise:
 
-cbot big-write myfile
+`cbot big-write myfile`
 
 Recover a big file from a post in /r/cryptoparadise:
 
