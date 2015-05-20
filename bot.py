@@ -10,9 +10,9 @@ def login():
         os.mkdir(temp_folder)
     if not os.path.isfile(conf_file):
         f = open(conf_file,'a')
-        f.write(raw_input("Insert your reddit_username (OPTIONAL):  ")+"\n")
-        f.write(raw_input("Insert your reddit_password (OPTIONAL): ")+"\n")
-        f.write(raw_input("Insert your trunk (MANDATORY): ")+"\n")
+        f.write(raw_input("Insert your reddit_username (just if you want to post):  ")+"\n")
+        f.write(raw_input("Insert your reddit_password (just if you want to post: ")+"\n")
+        f.write(raw_input("Insert your reddit-folder (just if you want to read from this folder): ")+"\n")
 
 def get_info():
     f = open(conf_file)
