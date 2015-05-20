@@ -28,6 +28,9 @@ The script will ask you to insert username and password for you reddit account, 
 
 The script will also ask you for a reddit-folder. A reddit-folder is just the name of a post on reddit.com/r/cryptoparadise. If you want to read encrypted file from some post that was previous created, or if you want to store some encrypted file on that post, you should insert the name of the post.
 
+If you want to login as a different user, or you want to change the reddit-folder that you are using you will have to logout with:
+
+`cbot logout`
 ##How do I store encrpted file on reddit
 
 The command `write` and `read` are used to read or write from a reddit-folder that was specified in the login procedure.

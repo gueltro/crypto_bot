@@ -7,6 +7,9 @@ command = sys.argv[1]
 if command == "login":
     login()
 
+if command == "logout":
+    logout()
+
 if command == "write":
     file_in = sys.argv[2]
     post_file(file_in)
