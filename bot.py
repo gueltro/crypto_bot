@@ -109,6 +109,7 @@ def read_post(filename):
 
 	for submission in subreddit.get_hot():
 		if submission.title == cipher_name:
+                        submission.replace_more_comments(limit=None, threshold=0)
 			for comment in submission.comments: 
 				cipher_text += comment.body 
 
