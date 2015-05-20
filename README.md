@@ -51,4 +51,4 @@ Recover a big file from a post in /r/cryptoparadise:
 
 `cbot big-read myfile`
 
-Note that I do not advice storing big files. It will take a very long time, and it will overload reddit, that is open source and  allows us to run bots. 
+Note that I do not advice storing very big files. It will take a very long time, and it will overload reddit, that is cool and open source and  allows us to run bots. A pdf or picture will be fine, but please do not upload long videos or similar.
