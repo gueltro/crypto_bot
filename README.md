@@ -16,9 +16,13 @@ and praw with:
 
 
 ## How do I start usig `cbot`?
-Insert this in yout .bashrc (or .zshrc or similar):
+Insert this in yout .bashrc (or .zshrc or similar) if you are on linux:
 
 `alias cbot="python $USER/crypto_bot/interface.py"`
+
+If you are a mac user you should use:
+
+`alias cbot="python $HOME/crypto_bot/interface.py"`
 
 Login as a reddit user:  
 
